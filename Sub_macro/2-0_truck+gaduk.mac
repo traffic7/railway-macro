@@ -1,0 +1,27 @@
+
+~## 트럭교통량(최종)
+
+~/***************************************************************************
+~/*
+~/*    %1% veh_struck+dvlp+gaduk
+~/*    %2% veh_mtruck+dvlp+gaduk
+~/*    %3% veh_ltruck+dvlp+gaduk
+~/*
+~/*    %4% veh_struck+dvlp
+~/*    %5% veh_mtruck+dvlp
+~/*    %6% veh_ltruck+dvlp
+~/*
+~/*    %7% veh_struck+gaduk
+~/*    %8% veh_mtruck+gaduk
+~/*    %9% veh_ltruck+gaduk
+~/*
+~/***************************************************************************
+
+~+;3.21;1;y;%1%;y;veh;struck+dvlp+gaduk;y;0
+~+;%4%+%7%; ; ;n;1;q
+
+~+;3.21;1;y;%2%;y;veh;mtruck+dvlp+gaduk;y;0
+~+;%5%+%8%; ; ;n;1;q
+
+~+;3.21;1;y;%3%;y;veh;ltruck+dvlp+gaduk;y;0
+~+;%6%+%9%; ; ;n;1;q

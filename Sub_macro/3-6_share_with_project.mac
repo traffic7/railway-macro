@@ -1,0 +1,41 @@
+
+~## 수단분담률
+~/ aidditive 분담률 합=0, 미시행시 통행량을 넣는다.
+~/ (효용합이 0인 경우가 없으면 삭제)
+
+~/***************************************************************************
+~/*
+~/*    %1% share_car_final
+~/*    %2% share_bus_final
+~/*    %3% share_rail_final
+~/*
+~/*    %4% Prob_total_model(after)
+~/*    %5% Prob_car_incremental+additive(after)
+~/*    %6% Prob_bus_incremental+additive(after)
+~/*    %7% Prob_rail_incremental+additive(after)
+~/*
+~/*    %8% share_car_by_od(before)   
+~/*    %9% share_bus_by_od(before)   
+~/*    %10% share_rail_by_od(before)  
+~/*
+~/***************************************************************************
+
+~+;3.21;1;y;%1%;y;share;share_car_final;y;0
+~+;%5%/%4%; ;%4%;0 0 exclude;n;1;q
+ 
+~+;3.21;1;y;%1%;y;share;share_car_final_f;n
+~+;%8%; ;%4%;0 0 include;n;1;q
+
+
+~+;3.21;1;y;%2%;y;share;share_bus_final;y;0
+~+;%6%/%4%; ;%4%;0 0 exclude;n;1;q
+
+~+;3.21;1;y;%2%;y;share;share_bus_final;n
+~+;%9%; ;%4%;0 0 include;n;1;q
+
+
+~+;3.21;1;y;%3%;y;share;share_rail_fianl;y;0
+~+;%7%/%4%; ;%4%;0 0 exclude;n;1;q
+
+~+;3.21;1;y;%3%;y;share;share_rail_fianl;n
+~+;%10%; ;%4%;0 0 include;n;1;q

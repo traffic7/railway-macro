@@ -1,0 +1,25 @@
+
+~/***************************************************************************
+~/*
+~/*     %1% 시나리오번호
+~/*     %2% pcu_car
+~/*     %3% pcu_bus
+~/*     %4% pcu_struck
+~/*     %5% pcu_mtruck
+~/*     %6% pcu_ltruck
+~/*
+~/***************************************************************************
+
+reports=multi.out
+s=%1%
+
+~+;5.23;~?q=2;2;1
+~+;c;@toll_car;1;%2%; ;@assign_car;n; ;len; ;+; ;1; ; ; ; 
+~+;c;@toll_bus;1;%3%; ;@assign_bus;n; ;len; ;+; ;1; ; ; ; 
+~+;c;@toll_st;1;%4%; ;@assign_struck;n; ;len; ;+; ;1; ; ; ; 
+~+;c;@toll_mt;1;%5%; ;@assign_mtruck;n; ;len; ;+; ;1; ; ; ; 
+~+;c;@toll_lt;1;%6%; ;@assign_ltruck;n; ;len; ;+; ;1; ; ; ; 
+~+;/;1000;0.0001;0.00005;0.005;2;2
+
+~+;2.41;1;y;@veh;n;@assign_car+@assign_bus/2.0+
+~+;@assign_struck/1.3+@assign_mtruck/3.7+@assign_ltruck/3.8; ;*;4;q

@@ -1,0 +1,30 @@
+
+~## 수단분담 후 수단별 통행량
+
+~/***************************************************************************
+~/*
+~/*    %1% trip_sum+dvlp+gaduk
+~/*    %2% trip_car_final
+~/*    %3% trip_bus_final
+~/*    %4% trip_rail_final
+~/*
+~/*    %5% trip_car_final
+~/*    %6% trip_bus_final
+~/*    %7% trip_rail_final
+~/*
+~/*    %8% trip_sum+dvlp
+~/*    %9% trip_gaduk
+~/*
+~/***************************************************************************
+
+~+;3.21;1;y;%1%;y;trip;trip_sum+dvlp+gaduk;y;0
+~+;%8%+%9%; ; ;n;1;q
+
+~+;3.21;1;y;%2%;y;trip;trip_car_final;y;0
+~+;%1%*%5%; ; ;n;1;q
+
+~+;3.21;1;y;%3%;y;trip;trip_bus_final;y;0
+~+;%1%*%6%; ; ;n;1;q
+
+~+;3.21;1;y;%4%;y;trip;trip_rail_final;y;0
+~+;%1%*%7%; ; ;n;1;q

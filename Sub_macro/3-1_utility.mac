@@ -1,0 +1,50 @@
+~#~## Utility 
+~#batchin=3_macro\modal_split\station_index_2030.in
+~#3.11
+~#1
+~#
+~#~### KTDB ¹Ì¹Ý¿µ Ã¶µµ°èÈ¹ ¹Ý¿µ
+~#batchin=3_macro\modal_split\station_index_3030.in
+~#3.11
+~#1
+~#
+~#~### °¡´ö½Å°øÇ× Ã¶µµ¹Ý¿µ
+~#batchin=3_macro\modal_split\station_index_3030.in
+~#3.11
+~#1
+
+
+~/***************************************************************************
+~/*
+~/*    %1% utility_total
+~/*    %2% utility_car
+~/*    %3% utility_bus
+~/*    %4% utility_rail
+~/*
+~/*    %5% time_car
+~/*    %6% time_bus
+~/*    %7% time_rail
+~/*
+~/*    %8% cost_car
+~/*    %9% cost_bus
+~/*    %10% cost_rail
+~/*
+~/*    %11% station index
+~/*    %12% number of transfer
+~/*    %13% total road length 
+~/*
+~/***************************************************************************
+
+~+;3.21;1;y;%2%;y;utility;car_utility;y;0
+~+;exp(-0.01924*%5%-0.0001049*%8%+0)*10000; ; ;n;1;q
+
+~+;3.21;1;y;%3%;y;utility;bus_utility;y;0
+~+;exp(-0.01924*%6%-0.0001049*%9%-0.30092)*10000; ; ;n;1;q
+
+~+;3.21;1;y;%4%;y;utility;rail_utility;y;0
+~+;exp(-0.01924*%7%-0.0001049*%10%-1.9822+1.52389*((%11%==1)&(%11%'==1)))
+~+;*10000
+~+; ; ;n;1;q
+
+~+;3.21;1;y;%1%;y;utility;total_utility;y;0
+~+;%2%+%3%+%4%; ; ;n;1;q

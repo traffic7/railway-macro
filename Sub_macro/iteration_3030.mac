@@ -1,0 +1,36 @@
+
+~#****************************************************************************************************************
+~# 1. modal split
+~#  1-1. utility
+~<3_macro\3-1_utility.mac mf625 mf626 mf627 mf628 mf601 mf602 mf618 mf603 mf604 mf619 mo600 mf622
+
+~#  1-2. share by utility
+~<3_macro\3-2_share_by_utility.mac mf631 mf632 mf633 mf625 mf626 mf627 mf628
+
+~#  1-3. incremental
+~<3_macro\3-4_incremental.mac mf1161 mf1162 mf1163 mf0174 mf0175 mf0176 mf1151 mf1152 mf1153 mf0151 mf0152 mf0153
+  
+~#  1-4. additive
+~<3_macro\3-5_additive_0.mac mf1160 mf1161 mf1162 mf1163 mf0174 mf0175 mf0176 mf1171 mf1172 mf1173 mf0171 mf0172 mf0173
+  
+~#  1-5. share with project
+~<3_macro\3-6_share_with_project.mac mf1174 mf1175 mf1176 mf1160 mf1161 mf1162 mf1163 mf0174 mf0175 mf0176
+
+~#  1-6. trip_with_project
+~<4_futureplan\1_devolopment\macro_dvlp_TD.mac mf2000 mf0200 mf0101 mf0102 mf0103 mo0041 md0041 mo0141 md0141
+~<3_macro\3-7_trip_with_project.mac mf1200 mf1101 mf1102 mf1103 mf1174 mf1175 mf1176 mf2000 mf180
+
+~# 2. road time+cost
+~#  2-1. pcu
+~#  >> zone추가로 재차인원 매트릭스 수정 필요
+~<3_macro\2-1_pcu.mac mf1101 mf1102 mf1104 mf1105 mf1106 mf1131 mf1132 mf1134 mf1135 mf1136 mf1130
+
+reports=process.out
+~#  2-2. road assignment
+~<3_macro\2-2_road_assign.mac 30301 mf1130 mf1140 mf1141 mf1142
+
+~#  2-3. road time+cost
+~<3_macro\2-3_road_timecost.mac mf1154 mf1157 mf1155 mf1158 mf1140 mf1141 mf1142
+
+
+~#****************************************************************************************************************

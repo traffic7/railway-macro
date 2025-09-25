@@ -1,0 +1,83 @@
+
+~#************************************************************************************************미시행
+
+~#  0-2. rail time+cost
+~<3_macro\1_rail_assign.mac 11135 mf43 mf632 mf633 mf634 mf635 mf636 mf637 mf638 mf639 mf640 mf641 mf642
+
+~#  3. utility_DN
+~<3_macro\3-1_utility.mac mf635 mf646 mf637 mf638 mf605 mf606 mf618 mf607 mf608 mf619 mo600 mf622
+
+
+
+
+
+~#************************************************************************************************
+batchin=4_futureplan\221_donot_plan.in
+s=50302
+2.21
+1
+
+s=50303
+2.21
+1
+
+batchin=3_macro\modal_split\station_index_5030.in
+3.11
+1
+
+
+~# 0. initial; time+cost
+~#  0-1. road time+cost
+~<3_macro\0_initial_road_time_cost.mac mf601 mf602 mf603 mf604 mf605 mf606 mf607 mf608 
+~#  0-2. rail time+cost
+~<3_macro\1_rail_assign.mac 11235 mf43 mf612 mf613 mf614 mf615 mf616 mf617 mf618 mf619 mf620 mf621 mf622
+
+
+~#
+~#~#  dvpl_truck
+~#~<4_futureplan\1_devolopment\macro_truck_TD.mac mf1104 mf0104 mo0042 md0042 mo0142 md0142
+~#~<4_futureplan\1_devolopment\macro_truck_TD.mac mf1105 mf0105 mo0043 md0043 mo0143 md0143
+~#~<4_futureplan\1_devolopment\macro_truck_TD.mac mf1106 mf0106 mo0044 md0044 mo0144 md0144
+~#
+~#~<3_macro\2-0_truck+gaduk.mac mf1104 mf1105 mf1106 mf1114 mf1115 mf1116 mf0186 mf0187 mf0188  
+
+
+
+
+
+
+~<3_macro\iteration_3030.mac
+~<3_macro\iteration_3030.mac
+~<3_macro\iteration_3030.mac
+~<3_macro\iteration_3030.mac
+~<3_macro\iteration_3030.mac
+~<3_macro\iteration_3030.mac
+~#
+~#~#5. rail
+~#  5-1. adjustment
+~#~<2_adjustment\2_rail\odsplit.mac 50303 mf2103 mf2113
+~#~<2_adjustment\2_rail\m_production(z1,25).mac 50303 mf2113
+~#
+~#  5-2. rail assignment
+~<3_macro\1_rail_assign.mac 11135 mf2113 mf2143 mf2144 mf2145 mf2146 mf2147 mf2148 mf2156 mf2159 mf2149 mf2139 mf0043
+
+
+~#  2-1. pcu
+~#   >> zone추가로 재차인원 매트릭스 수정 필요
+~<3_macro\2-1_pcu.mac mf2101 mf2102 mf1104 mf1105 mf1106 mf2131 mf2132 mf2134 mf2135 mf2136 mf2130
+
+~#  2-2. road assignment
+~<3_macro\2-2_road_assign_multi.mac 50301 mf2131 mf2132 mf2134 mf2135 mf2136
+
+
+reports=5_result\ridership_donot.out
+s=50303
+6.21
+2
+NEWJGA
+NEWGJB
+NEWDGA
+NEWGDB
+
+2
+q

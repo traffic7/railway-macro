@@ -1,0 +1,33 @@
+~### 가법적 계산
+~/***************************************************************************
+~/*
+~/*    %1% Prob_total_model(after)
+~/*    %2% Prob_car_incremental+additve(after) 
+~/*    %3% Prob_bus_incremental+additve(after) 
+~/*    %4% Prob_rail_incremental+additve(after)
+~/*
+~/*    %5% share_car_by_od(before)   
+~/*    %6% share_bus_by_od(before)   
+~/*    %7% share_rail_by_od(before)  
+~/*
+~/*    %8% share_car_by_utility(after)   
+~/*    %9% share_bus_by_utility(after)   
+~/*    %10% share_rail_by_utility(after) 
+~/*
+~/*    %11% share_carby_utility(before) 
+~/*    %12% share_busby_utility(before) 
+~/*    %13% share_railby_utility(before)
+~/*
+~/***************************************************************************
+
+~+;3.21;1;y;%2%;y;Prob;car_additive;n
+~+;%2%+(%5%+%8%-%11%).max.0; ;%7%;0 0 include;n;1;q
+
+~+;3.21;1;y;%3%;y;Prob;bus_additive;n
+~+;%3%+(%6%+%9%-%12%).max.0; ;%7%;0 0 include;n;1;q
+
+~+;3.21;1;y;%4%;y;Prob;rail_additive;n
+~+;%4%+(%7%+%10%-%13%).max.0; ;%7%;0 0 include;n;1;q
+
+~+;3.21;1;y;%1%;y;Prob;sum_Prob(additive);y;0
+~+;%2%+%3%+%4%; ; ;n;1;q

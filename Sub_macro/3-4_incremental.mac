@@ -1,0 +1,30 @@
+
+~## 점진적 모형
+~/***************************************************************************
+~/*
+~/*    %1% Prob_car_incremental(after)
+~/*    %2% Prob_bus_incremental(after)
+~/*    %3% Prob_rail_incremental(after)
+~/*
+~/*    %4% share_car_by_od(before)
+~/*    %5% share_bus_by_od(before)
+~/*    %6% share_rail_by_od(before)
+~/*
+~/*    %7% utility_car(after)
+~/*    %8% utility_bus(after)
+~/*    %9% utility_rail(after)
+~/*
+~/*    %10% utility_car(before)
+~/*    %11% utility_bus(before)
+~/*    %12% utility_rail(before)
+~/*
+~/***************************************************************************
+
+~+;3.21;1;y;%1%;y;Prob;car_incremental;y;0
+~+;%4%*%7%/%10%*(%6%>0); ;%10%;0 0 exclude;n;1;q
+
+~+;3.21;1;y;%2%;y;Prob;bus_incremental;y;0
+~+;%5%*%8%/%11%*(%6%>0); ;%11%;0 0 exclude;n;1;q
+
+~+;3.21;1;y;%3%;y;Prob;rail_incremental;y;0
+~+;%6%*%9%/%12%*(%6%>0); ;%12%;0 0 exclude;n;1;q

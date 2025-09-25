@@ -1,0 +1,29 @@
+~## 도로 시간 비용 계산
+
+~/***************************************************************************
+~/*
+~/*    %1% car_time(after)
+~/*    %2% bus_time(after)
+~/*    %3% car_cost(after)
+~/*    %4% bus_cost(after)
+~/*
+~/*    %5% car_time(before)
+~/*    %6% bus_time(before)
+~/*    %7% car_cost(before)
+~/*    %8% bus_cost(before)
+~/*
+~/***************************************************************************
+
+
+~+;3.21;1;y;%1%;y;car_time;after_car_time;y;0
+~+;%5%; ; ;n;1;q
+
+~+;3.21;1;y;%3%;y;car_cost;after_car_cost;y;0
+~+;%7%; ; ;n;1;q
+
+
+~+;3.21;1;y;%2%;y;bus_time;after_bus_time;y;0
+~+;%6%; ; ;n;1;q
+
+~+;3.21;1;y;%4%;y;bus_cost;after_bus_cost;y;0
+~+;%8%; ; ;n;1;q

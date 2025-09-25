@@ -1,0 +1,24 @@
+~## 효용기반 분담률 계산
+
+~/***************************************************************************
+~/*
+~/*    %1% car_share_by_utility
+~/*    %2% bus_share_by_utility
+~/*    %3% rail_share_by_utility
+
+~/*    %4% utility_total
+~/*    %5% utility_car
+~/*    %6% utility_bus
+~/*    %7% utility_rail
+~/*
+~/***************************************************************************
+
+~+;3.21;1;y;%1%;y;share;car_share_by_utility;y;0
+~+;%5%/%4%; ;%4%;0 0 exclude;n;1;q
+
+~+;3.21;1;y;%2%;y;share;bus_share_by_utility;y;0
+~+;%6%/%4%; ;%4%;0 0 exclude;n;1;q
+
+~+;3.21;1;y;%3%;y;share;rail_share_by_utility;y;0
+~+;%7%/%4%; ;%4%;0 0 exclude;n;1;q
+
